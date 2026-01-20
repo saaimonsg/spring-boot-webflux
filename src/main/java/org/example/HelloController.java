@@ -11,6 +11,11 @@ public class HelloController {
     public Mono<String> hello() {
         return Mono.just("Hola WebFlux 👋");
     }
+
+    @GetMapping("/json")
+    public Mono<User> user() {
+        return Mono.just(new User("admin", "admin"));
+    }
     @GetMapping("/delayed")
     public Mono<String> delayed() {
         return Mono
@@ -31,4 +36,5 @@ public class HelloController {
                 })
                 .subscribeOn(reactor.core.scheduler.Schedulers.boundedElastic());
     }
+
 }
