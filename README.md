@@ -19,8 +19,8 @@ reactive connections and execute operations in a **non-blocking** way.
 ## 🎯 Purpose
 
 This project is intended as a base for building reactive APIs using
-Spring WebFlux, focusing on scalability, efficient thread usage,
-and asynchronous data processing.
+Spring WebFlux, focusing efficient thread usage,
+and asynchronous data processing for learning purposes.
 
 ## 📦 Architecture
 
