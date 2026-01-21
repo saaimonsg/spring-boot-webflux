@@ -11,8 +11,16 @@ spring:
       quiet-period: 400ms
     livereload:
       enabled: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/webflux_db
+    username: webflux
+    password: secret
+  sql:
+    init:
+      mode: always
 
 logging:
   level:
     reactor.netty: INFO
+    org.springframework.r2dbc: DEBUG
 
