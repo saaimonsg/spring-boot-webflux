@@ -14,7 +14,6 @@ public class JwtAuthenticationFilter {
 
     public static AuthenticationWebFilter create() {
 
-        // ✅ AuthenticationManager explícito (evita ambigüedad)
         ReactiveAuthenticationManager authManager =authentication -> Mono.just(authentication);
 
         AuthenticationWebFilter filter = new AuthenticationWebFilter(authManager);
