@@ -27,11 +27,9 @@ public class SecurityConfig {
                         .anyExchange().authenticated()
                 )
 
-                // ❌ NO BASIC
                 .httpBasic(ServerHttpSecurity.HttpBasicSpec::disable)
                 .formLogin(ServerHttpSecurity.FormLoginSpec::disable)
 
-                // ✅ JWT FILTER
                 .addFilterAt(
                         JwtAuthenticationFilter.create(),
                         SecurityWebFiltersOrder.AUTHENTICATION
