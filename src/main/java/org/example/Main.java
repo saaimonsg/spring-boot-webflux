@@ -10,10 +10,9 @@ import java.util.TimeZone;
 public class Main {
 
     public static void main(String[] args) {
-        //TODO        Convertir a zona local solo en la UI
+        //TODO Convertir a zona local solo en la UI
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
         SpringApplication app = new SpringApplication(Main.class);
-
         app.setWebApplicationType(WebApplicationType.REACTIVE);
         app.run(args);
     }
